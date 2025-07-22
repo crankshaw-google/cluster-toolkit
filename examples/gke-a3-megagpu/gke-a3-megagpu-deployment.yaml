@@ -17,34 +17,34 @@ terraform_backend_defaults:
   type: gcs
   configuration:
     # The GCS bucket used for storing terraform state
-    bucket: BUCKET_NAME
+    bucket: a3mega-benchmark-tform
 
 vars:
   # This should be unique across all of your Cluster
   # Toolkit Deployments.
-  deployment_name: DEPLOYMENT_NAME
+  deployment_name: a3mega-benchmark
 
   # Your GCP Project ID
-  project_id: PROJECT_ID
+  project_id: supercomputer-testing
 
   # The GCP Region used for this deployment.
-  region: COMPUTE_REGION
+  region: asia-east1
 
   # The GCP Zone used for this deployment.
-  zone: COMPUTE_ZONE
+  zone: asia-east1-c
 
   # Cidr block containing the IP of the machine calling terraform.
   # The following line must be updated for this example to work.
-  authorized_cidr: <IP_ADDRESS>/<SUFFIX>
+  authorized_cidr: 34.125.154.15/32
 
   # The number of nodes to be created
-  static_node_count: NODE_COUNT
+  static_node_count: 50
 
   # The name of the compute engine reservation in the form of
   # <reservation-name>
   # To target a BLOCK_NAME, the name of the extended reservation
   # can be inputted as <reservation-name>/reservationBlocks/<reservation-block-name>
-  reservation: RESERVATION_NAME
+  reservation: a3mega-benchmark-res
 
   enable_periodic_health_checks: false # Make this true to run CHS (healthchecks)
   health_check_schedule: "0 0 * * 0" # Run the health check at 12:00 AM (midnight) every Sunday
