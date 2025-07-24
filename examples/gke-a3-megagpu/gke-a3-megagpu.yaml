@@ -141,6 +141,7 @@ deployment_groups:
         consume_reservation_type: SPECIFIC_RESERVATION
         specific_reservations:
         - name: $(vars.reservation)
+      host_maintenance_interval: $(vars.host_maintenance_interval)
     outputs: [instructions]
 
   - id: workload_manager_install
