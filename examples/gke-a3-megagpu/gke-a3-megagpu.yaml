@@ -127,9 +127,15 @@ deployment_groups:
       version_prefix: $(vars.version_prefix)
     outputs: [instructions]
 
+  - id: a3_megagpu_group_placement
+    source: modules/compute/resource-policy
+    settings:
+      name: gpu-gp
+      group_placement_max_distance: 2
+
   - id: a3_megagpu_pool
     source: modules/compute/gke-node-pool
-    use: [gke_cluster, gpunets, node_pool_service_account]
+    use: [gke_cluster, gpunets, node_pool_service_account, a3_megagpu_group_placement]
     settings:
       machine_type: a3-megagpu-8g
       static_node_count: $(vars.static_node_count)
