@@ -130,7 +130,8 @@ deployment_groups:
   - id: a3_megagpu_group_placement
     source: modules/compute/resource-policy
     settings:
-      name: gpu-gp
+      name: a3mega-benchmark-rp
+      # name: gpu-gp
       group_placement_max_distance: 2
 
   - id: a3_megagpu_pool
