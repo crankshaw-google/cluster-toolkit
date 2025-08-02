@@ -38,13 +38,13 @@ vars:
   authorized_cidr: 34.125.154.15/32
 
   # The number of nodes to be created
-  static_node_count: 50
+  static_node_count: 36
 
   # The name of the compute engine reservation in the form of
   # <reservation-name>
   # To target a BLOCK_NAME, the name of the extended reservation
   # can be inputted as <reservation-name>/reservationBlocks/<reservation-block-name>
-  reservation: a3mega-benchmark-res
+  reservation: swq-a3mega-0722
 
   # The maintenance interval for the node pool. Can be one of PERIODIC or AS_NEEDED.
   host_maintenance_interval: PERIODIC
